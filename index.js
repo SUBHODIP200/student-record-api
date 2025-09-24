@@ -9,6 +9,10 @@ const studentRoutes = require('./routes/students');
 const app = express();
 app.use(express.json());
 
+const cors = require("cors");
+app.use(cors());
+
+
 // Test endpoint
 app.get('/', (req, res) => res.json({ ok: true, message: 'Student Record API is running' }));
 
